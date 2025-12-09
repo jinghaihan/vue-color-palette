@@ -1,0 +1,7 @@
+export * from './composables'
+export * from './constants'
+export { default as ColorPicker } from './index.vue'
+export * from './locales'
+export { default as ColorPickerTrigger } from './trigger.vue'
+export * from './types'
+export * from './utils'

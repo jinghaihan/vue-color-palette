@@ -1,0 +1,17 @@
+{
+  "button": {
+    "monochrome": "单色",
+    "linear-gradient": "线性渐变",
+    "radial-gradient": "径向渐变"
+  },
+  "gradient": {
+    "angle": "角度",
+    "position-x": "水平",
+    "position-y": "垂直",
+    "percentage": "占比"
+  },
+  "text": {
+    "swatch-colors": "系统预设",
+    "recent-colors": "最近使用"
+  }
+}

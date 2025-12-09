@@ -1,0 +1,17 @@
+{
+  "button": {
+    "monochrome": "Solid",
+    "linear-gradient": "Linear",
+    "radial-gradient": "Radial"
+  },
+  "gradient": {
+    "angle": "Angle",
+    "position-x": "X",
+    "position-y": "Y",
+    "percentage": "Percentage"
+  },
+  "text": {
+    "swatch-colors": "Swatch Colors",
+    "recent-colors": "Recent Colors"
+  }
+}

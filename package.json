@@ -1,0 +1,91 @@
+{
+  "name": "vue-color-palette",
+  "type": "module",
+  "version": "0.0.0-alpha.1",
+  "packageManager": "pnpm@10.25.0",
+  "description": "Color picker with linear/radial gradient support.",
+  "author": "jinghaihan",
+  "license": "MIT",
+  "homepage": "https://github.com/jinghaihan/vue-color-palette#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jinghaihan/vue-color-palette.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jinghaihan/vue-color-palette/issues"
+  },
+  "keywords": [
+    "vue",
+    "color-picker",
+    "color-palette",
+    "format",
+    "multiple-format",
+    "gradient",
+    "linear-gradient",
+    "radial-gradient"
+  ],
+  "exports": {
+    ".": "./dist/index.js",
+    "./index.css": "./dist/index.css",
+    "./theme.css": "./dist/theme.css",
+    "./package.json": "./package.json"
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "tsdown",
+    "deps": "taze major -I",
+    "lint": "eslint",
+    "typecheck": "vue-tsc --noEmit",
+    "test": "vitest",
+    "release": "bumpp",
+    "bootstrap": "pnpm install",
+    "prepare": "simple-git-hooks",
+    "prepublishOnly": "pnpm build"
+  },
+  "peerDependencies": {
+    "vue": ">=3.0.0"
+  },
+  "dependencies": {
+    "@floating-ui/dom": "catalog:frontend",
+    "@vueuse/core": "catalog:utils",
+    "colord": "catalog:prod"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "catalog:lint",
+    "@iconify-json/lucide": "catalog:icons",
+    "@iconify-json/tabler": "catalog:icons",
+    "@types/node": "catalog:types",
+    "@unocss/eslint-plugin": "catalog:lint",
+    "@vitejs/plugin-vue": "catalog:build",
+    "@vue/test-utils": "catalog:test",
+    "bumpp": "catalog:cli",
+    "eslint": "catalog:lint",
+    "eslint-plugin-format": "catalog:lint",
+    "happy-dom": "catalog:dev",
+    "lint-staged": "catalog:lint",
+    "pncat": "catalog:cli",
+    "simple-git-hooks": "catalog:lint",
+    "taze": "catalog:cli",
+    "tsdown": "link:/Users/jinghaihan/code/forks/tsdown",
+    "tsx": "catalog:script",
+    "typescript": "catalog:tsc",
+    "unocss": "catalog:style",
+    "unplugin-icons": "catalog:build",
+    "unplugin-lightningcss": "catalog:build",
+    "vite": "catalog:build",
+    "vitest": "catalog:test",
+    "vue-tsc": "catalog:tsc"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm lint-staged"
+  },
+  "lint-staged": {
+    "*": "eslint --fix"
+  }
+}

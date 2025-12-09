@@ -1,0 +1,53 @@
+catalogMode: prefer
+
+shellEmulator: true
+
+trustPolicy: no-downgrade
+packages:
+  - .
+  - playground
+
+catalogs:
+  build:
+    '@vitejs/plugin-vue': ^6.0.2
+    unplugin-icons: ^22.5.0
+    unplugin-lightningcss: ^0.4.3
+    vite: ^7.2.7
+  cli:
+    bumpp: ^10.3.2
+    pncat: ^0.7.7
+    taze: ^19.9.2
+  dev:
+    happy-dom: ^20.0.11
+  frontend:
+    '@floating-ui/dom': ^1.7.4
+  icons:
+    '@iconify-json/lucide': ^1.2.79
+    '@iconify-json/tabler': ^1.2.24
+  lint:
+    '@antfu/eslint-config': ^6.5.1
+    '@unocss/eslint-plugin': ^66.5.11
+    eslint: ^9.39.1
+    eslint-plugin-format: ^1.1.0
+    lint-staged: ^16.2.7
+    simple-git-hooks: ^2.13.1
+  prod:
+    colord: ^2.9.3
+  script:
+    tsx: ^4.21.0
+  style:
+    '@unocss/reset': ^66.5.11
+    unocss: ^66.5.11
+  test:
+    '@vue/test-utils': ^2.4.6
+    vitest: ^4.0.15
+  tsc:
+    typescript: ^5.9.3
+    vue-tsc: ^3.1.8
+  types:
+    '@types/node': ^24.10.2
+  utils:
+    '@vueuse/core': ^14.1.0
+onlyBuiltDependencies:
+  - esbuild
+  - simple-git-hooks

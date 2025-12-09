@@ -1,0 +1,65 @@
+export const COLOR_MODE_CHOICES = ['monochrome', 'linear-gradient', 'radial-gradient'] as const
+
+export const COLOR_FORMAT_CHOICES = [
+  'HEX',
+  'RGB',
+  'HSL',
+  'HSV',
+  'CMYK',
+] as const
+
+export const DEFAULT_GRADIENT_STOPS = [
+  {
+    id: 1,
+    percentage: 0,
+    color: '#e7000b',
+  },
+  {
+    id: 2,
+    percentage: 100,
+    color: '#496adc',
+  },
+]
+
+export const SWATCH_COLORS = [
+  '#ECF2FE',
+  '#D4E3FC',
+  '#BBD3FB',
+  '#96BBF8',
+  '#699EF5',
+  '#4787F0',
+  '#266FE8',
+  '#0052D9',
+  '#0034B5',
+  '#001F97',
+  '#FDECEE',
+  '#F9D7D9',
+  '#F8B9BE',
+  '#F78D94',
+  '#F36D78',
+  '#E34D59',
+  '#C9353F',
+  '#B11F26',
+  '#951114',
+  '#680506',
+  '#FEF3E6',
+  '#F9E0C7',
+  '#F7C797',
+  '#F2995F',
+  '#ED7B2F',
+  '#D35A21',
+  '#BA431B',
+  '#9E3610',
+  '#842B0B',
+  '#5A1907',
+  '#E8F8F2',
+  '#BCEBDC',
+  '#85DBBE',
+  '#48C79C',
+  '#00A870',
+  '#078D5C',
+  '#067945',
+  '#056334',
+  '#044F2A',
+  '#033017',
+]
