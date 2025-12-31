@@ -39,6 +39,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsdown",
+    "playground:build": "vite build",
     "deps": "taze major -I",
     "lint": "eslint",
     "typecheck": "vue-tsc --noEmit",
