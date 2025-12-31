@@ -1,18 +1,13 @@
-catalogMode: prefer
-
-shellEmulator: true
-
-trustPolicy: no-downgrade
 packages:
   - .
   - playground
-
 catalogs:
   build:
-    '@vitejs/plugin-vue': ^6.0.2
+    '@vitejs/plugin-vue': ^6.0.3
+    tsdown: ^0.18.4
     unplugin-icons: ^22.5.0
-    unplugin-lightningcss: ^0.4.3
-    vite: ^7.2.7
+    unplugin-lightningcss: ^0.4.4
+    vite: ^7.3.0
   cli:
     bumpp: ^10.3.2
     pncat: ^0.7.7
@@ -22,12 +17,12 @@ catalogs:
   frontend:
     '@floating-ui/dom': ^1.7.4
   icons:
-    '@iconify-json/lucide': ^1.2.79
-    '@iconify-json/tabler': ^1.2.24
+    '@iconify-json/lucide': ^1.2.82
+    '@iconify-json/tabler': ^1.2.25
   lint:
-    '@antfu/eslint-config': ^6.5.1
-    '@unocss/eslint-plugin': ^66.5.11
-    eslint: ^9.39.1
+    '@antfu/eslint-config': ^6.7.3
+    '@unocss/eslint-plugin': ^66.5.12
+    eslint: ^9.39.2
     eslint-plugin-format: ^1.1.0
     lint-staged: ^16.2.7
     simple-git-hooks: ^2.13.1
@@ -36,16 +31,16 @@ catalogs:
   script:
     tsx: ^4.21.0
   style:
-    '@unocss/reset': ^66.5.11
-    unocss: ^66.5.11
+    '@unocss/reset': ^66.5.12
+    unocss: ^66.5.12
   test:
     '@vue/test-utils': ^2.4.6
-    vitest: ^4.0.15
+    vitest: ^4.0.16
   tsc:
     typescript: ^5.9.3
-    vue-tsc: ^3.1.8
+    vue-tsc: ^3.2.1
   types:
-    '@types/node': ^24.10.2
+    '@types/node': ^25.0.3
   utils:
     '@vueuse/core': ^14.1.0
 onlyBuiltDependencies:

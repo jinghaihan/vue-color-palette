@@ -6,4 +6,7 @@ export default antfu({
     html: true,
     css: true,
   },
+  rules: {
+    'pnpm/yaml-enforce-settings': 'off',
+  },
 })
