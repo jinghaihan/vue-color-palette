@@ -1,7 +1,7 @@
 {
   "name": "vue-color-palette",
   "type": "module",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "packageManager": "pnpm@10.27.0",
   "description": "Color picker with linear/radial gradient support.",
   "author": "jinghaihan",
