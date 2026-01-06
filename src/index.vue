@@ -11,7 +11,7 @@ import GradientSlider from './components/gradient-slider.vue'
 import HueAlphaSliders from './components/hue-alpha-sliders.vue'
 import ModePicker from './components/mode-picker.vue'
 import Saturation from './components/saturation.vue'
-import { useDarkDetector, useI18n, useLocaleDetector } from './composables'
+import { useDarkDetector, useI18n, useLocaleDetector, useTailwindV3Theme } from './composables'
 import { DEFAULT_GRADIENT_STOPS, SWATCH_COLORS } from './constants'
 import { loadLocaleMessages, localeLoaded } from './locales'
 import { isClient, parseGradient } from './utils'
@@ -40,6 +40,7 @@ const recentColors = defineModel<false | string[]>('recentColors', { default: []
 
 const { locale: localeProp, isDark: isDarkProp } = toRefs(props)
 
+const { cssVariables } = useTailwindV3Theme({ element: props.themeElement })
 const { isDark } = useDarkDetector(isDarkProp)
 const { locale } = useLocaleDetector(localeProp)
 const { t } = useI18n()
@@ -170,6 +171,7 @@ watch(locale, () => loadLocaleMessages(locale.value))
     class="color-palette"
     :class="[isDark ? 'dark' : 'light']"
     data-color-palette="color-palette"
+    :style="cssVariables"
   >
     <Saturation
       v-model:color="currentColor"

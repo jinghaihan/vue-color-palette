@@ -21,6 +21,7 @@ export interface ColorPickerProps {
   swatchColors?: boolean | string[]
   locale?: string | LocaleConfig
   isDark?: boolean
+  themeElement?: () => HTMLElement | undefined
 }
 
 export interface ColorPickerTriggerProps extends Omit<ColorPickerProps, 'value'> {

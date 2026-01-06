@@ -32,21 +32,6 @@ import 'vue-color-palette/index.css'
 import 'vue-color-palette/theme.css'
 ```
 
-#### Tailwind v3 Integration
-
-If you're using Tailwind v3, wrap the component with a wrapper to adapt the HSL format:
-
-```css
-.color-palette-theme-wrapper {
-  --primary-hsl: var(--primary);
-}
-
-.color-palette,
-.color-palette-trigger {
-  --primary: hsl(var(--primary-hsl));
-}
-```
-
 ### Basic Usage
 
 `ColorPicker` renders the panel directly. Use `ColorPickerTrigger` if you need a trigger button:

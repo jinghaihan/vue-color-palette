@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import type { ColorFormat, ColorPickerProps } from './types'
 import { ref, toRefs, watch } from 'vue'
-import { useDarkDetector, useFloating } from './composables'
+import { useDarkDetector, useFloating, useTailwindV3Theme } from './composables'
 import ColorPicker from './index.vue'
 
 const props = withDefaults(defineProps<ColorPickerProps & { placeholder?: string }>(), {
@@ -21,6 +21,8 @@ const emits = defineEmits<{
   (e: 'recentColorsChange', value: string[]): void
 }>()
 const { isDark: isDarkProp } = toRefs(props)
+
+const { cssVariables } = useTailwindV3Theme({ element: props.themeElement })
 const { isDark } = useDarkDetector(isDarkProp)
 
 const value = defineModel<string | undefined>('value', { required: false, default: '' })
@@ -52,7 +54,11 @@ watch(value, (data) => {
 </script>
 
 <template>
-  <div class="color-palette-trigger" :class="[isDark ? 'dark' : 'light']">
+  <div
+    class="color-palette-trigger"
+    :class="[isDark ? 'dark' : 'light']"
+    :style="cssVariables"
+  >
     <div
       ref="_referenceEl"
       :data-disabled="disabled"
